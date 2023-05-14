@@ -1,0 +1,10 @@
+rootProject.name = 'entry_point'
+
+include ':kernel-common'
+project(':kernel-common').projectDir=new File("$settingsDir/../kernel-common")
+
+include ':kernel-mastercard'
+project(':kernel-mastercard').projectDir=new File("$settingsDir/../kernel-mastercard")
+
+include ':kernel-visa'
+project(':kernel-visa').projectDir=new File("$settingsDir/../kernel-visa")

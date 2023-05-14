@@ -1,0 +1,22 @@
+group 'digital.paynetics.phos'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java-library'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.darwinsys:hirondelle-date4j:1.5.1'
+    implementation 'org.slf4j:slf4j-api:1.7.30'
+    implementation 'javax.inject:javax.inject:1'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'net.sourceforge.streamsupport:streamsupport:1.6.1'
+    api  project(':kernel-mastercard')
+    api  project(':kernel-visa')
+//    api files('libs/kernel_visa-1.0.1.jar')
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
